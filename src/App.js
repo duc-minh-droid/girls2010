@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import Navbar from './components/navbar/Navbar'
+import Home from './pages/Home'
+import {onAuthStateChanged} from 'firebase/auth'
+import { auth } from './fbconfig'
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn') === 'true'||false)
+
+//   const unsubscribe = onAuthStateChanged(auth, user => {
+//     if (user) {
+//       localStorage.setItem('currentUser', JSON.stringify(user))
+//     } 
+//   }) 
+//   unsubscribe()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <Router>
+            <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
+            <Routes>
+                <Route path='/' element={<Home isLoggedIn={isLoggedIn}/>}/>
+            </Routes>
+        </Router>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
