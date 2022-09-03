@@ -17,3 +17,4 @@ export const storage = getStorage(app)
 export const auth = getAuth(app);
 const db = getFirestore(app)
 export const lettersDB = collection(db, 'letters')
+export const usersDB = collection(db, 'users')
