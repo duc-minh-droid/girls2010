@@ -12,7 +12,7 @@ function UseHandleUser(setLoggedIn) {
         const userRef = doc(usersDB, user.uid)
         let gender = 'girl'
         const snapshot = await getDoc(userRef)
-        const boys = ['Duc Minh Ng']
+        const boys = ['Duc Minh Ng', 'Chu Đình Anh', 'Gia Bao Tran', 'Minh Đinh', 'Nam Zú Đứk', 'Phạm Bảo', 'Trần Long', 'Trần Quang Minh', 'Vũ Đức Nam']
 
         if (!snapshot.exists()) {
             try {
