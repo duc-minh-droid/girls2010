@@ -17,7 +17,8 @@ function Login({setIsLoggedIn}) {
 
   return (
     <div>
-      <button onClick={signIn}>Log In</button>
+      <button  className='bg-green-500 my-2 px-3 text-white rounded-3xl border border-transparent hover:border-green-500 hover:bg-transparent hover:text-green-500'
+       onClick={signIn}>Log In</button>
     </div>
   )
 }

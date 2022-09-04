@@ -14,7 +14,8 @@ function Logout({setIsLoggedIn}) {
 
   return (
     <>
-      <button onClick={handleLogOut}>Log out</button>
+      <button className='bg-red-500 my-2 px-3 text-white rounded-3xl border border-transparent hover:border-red-500 hover:bg-transparent hover:text-red-500'
+       onClick={handleLogOut}>Log out</button>
     </>
   )
 }
