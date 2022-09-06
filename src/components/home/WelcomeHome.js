@@ -1,8 +1,11 @@
 import React from 'react'
+import BodyContainer from '../container/BodyContainer'
 
 function WelcomeHome() {
   return (
-    <div>Chào bọn ngu lồn</div>
+    <BodyContainer>
+      Chào bọn ngu lồn
+    </BodyContainer>
   )
 }
 

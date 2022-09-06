@@ -1,8 +1,11 @@
 import React from 'react'
+import BodyContainer from '../container/BodyContainer'
 
 function GirlHome() {
   return (
-    <div>GirlHome</div>
+    <BodyContainer>
+      GirlHome
+    </BodyContainer>
   )
 }
 

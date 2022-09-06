@@ -5,6 +5,7 @@ import UseHandleUser from './hooks/UseHandleUser'
 import Boys from './pages/Boys'
 import Girls from './pages/Girls'
 import Home from './pages/Home'
+import Info from './pages/Info'
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn') === 'true'||false)
@@ -18,6 +19,7 @@ function App() {
                 <Route path='/' element={<Home />}/>
                 <Route path='/boys' element={<Boys />}/>
                 <Route path='/girls' element={<Girls />}/>
+                <Route path='/credit' element={<Info />}/>
             </Routes>
         </Router>
     </div>

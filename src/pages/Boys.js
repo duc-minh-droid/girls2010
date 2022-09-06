@@ -4,6 +4,7 @@ import UseLettersData from "../hooks/UseLettersData"
 import moment from "moment"
 import { useSelector } from 'react-redux'
 import {useNavigate} from 'react-router-dom'
+import BodyContainer from '../components/container/BodyContainer'
 
 function Boys() {
   const [toggleModal, setToggleModal] = useState(false)
@@ -20,7 +21,7 @@ function Boys() {
     }
   }, [user])
   return (
-    <div>
+    <BodyContainer>
         <button className='bg-black text-2xl ml-10 text-white px-3 rounded-lg hover:text-black hover:bg-white hover:border-black hover:border-2 border-2 border-transparent transition-all'
         onClick={() => setToggleModal(true)}>Add</button>
         <div className='flex justify-center'>
@@ -32,7 +33,7 @@ function Boys() {
             {data && data.map((letter, id)=><p key={id}>{moment(letter.createdAt.toDate()).calendar()}, {letter.sender} has sent {letter.recipient} a letter </p>)}
           </div>
         </div>
-    </div>
+    </BodyContainer>
   )
 }
 
