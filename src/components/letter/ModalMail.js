@@ -29,7 +29,7 @@ function ModalMail({ toggleModal, setToggleModal }) {
         <AnimatePresence exitBeforeEnter>
             {toggleModal && (
                 <motion.div variants={backdropVariants} animate='visible' initial='hidden' exit='hidden'
-                    className='fixed top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.5)] z-10 flex justify-center items-center'
+                    className='fixed top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.5)] z-50 flex justify-center items-center'
                     onClick={(e) => { setToggleModal(false) }}>
                     <motion.div variants={modalVariants}
                         className='bg-white w-4/5 md:w-1/2 lg:w-1/3 rounded-lg'
